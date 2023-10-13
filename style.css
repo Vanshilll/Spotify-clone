@@ -23,6 +23,8 @@ body {
     background-color: #121212;
     flex: 1;
     border-radius: 1rem;
+    overflow: auto;
+    padding: 0 1.5rem;
 }
 
 .music-player{
@@ -127,11 +129,22 @@ a{
     margin: 0.5rem;
     height: 2rem;
     width: fit-content;
+    cursor: pointer;
+}
+
+.badge:hover{
+   background-color: #000;
+   color: #fff;
 }
 
 .dark-badge {
     background-color: #000;
     color: #fff;
+}
+
+.dark-badge:hover {
+    background-color: #fff;
+    color: #000;
 }
 
 .sticky-nav {
@@ -157,6 +170,12 @@ a{
 
 .nav-item {
     margin-right: 1rem;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.nav-item:hover {
+    opacity: 1;
 }
 
 @media (max-width: 1000px) {
@@ -172,6 +191,12 @@ a{
     padding: 1rem;
     margin-left: 1.5rem;
     margin-top: 1rem;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+
+.card:hover {
+    background-color: #2c2c2c;
 }
 
 .card-img{
@@ -203,6 +228,160 @@ a{
 .line{
     width: 90%;
     height: 0;
-    border: 1px solid #fff;
-    opacity: 0.4;
+    border: 0.5px solid #fff;
+    opacity: 0.1;
+}
+
+.album {
+    border: 0.5rem;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    margin-right: -50px;
+}
+
+.album-img {
+    width: 44%;
+    margin-left: 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.album-img:hover {
+    cursor: pointer;
+    width: 45%;
+}
+
+.album-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.album-2 {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+
+.album-name {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.album-name:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.album-info {
+    font-size: 0.65rem;
+    opacity: 0.8;
+}
+
+.album-info:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.album-3 {
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+    opacity: 0.7;
+}
+
+.album-3:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.music-player {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+}
+
+.album {
+    width: 25%;
+}
+
+.player {
+    width: 50%;
+}
+
+.player-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-control-icon {
+    height: 1rem;
+    margin-right: 1.75rem;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.player-control-icon:hover {
+    opacity: 1;
+}
+
+.playback-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-bar {
+    width: 70%;
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.progress-bar::-webkit-slider-runnable-track {
+    background-color: #ddd;
+    border-radius: 100px;
+    height: 0.2rem;
+}
+
+.progress-bar::-webkit-slider-thumb {
+    appearance: none;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    background-color: #1bd760;
+    margin-top: -7px;
+}
+
+.controls {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.controls i{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.controls i:hover {
+    opacity: 1;
+}
+
+#vol-range::-webkit-slider-runnable-track {
+    background-color: white;
+    border-radius: 100px;
+    height: 0.1rem;
+}
+
+#vol-range::-webkit-slider-thumb {
+    appearance: none;
+    cursor: pointer;
+    height: 1rem;
+    width: 0.75rem;
+    border-radius: 50%;
+    margin-top: -7px;
 }
